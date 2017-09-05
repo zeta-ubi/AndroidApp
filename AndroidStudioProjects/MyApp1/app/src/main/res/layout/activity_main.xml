@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zeta.myapp1.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <Button
+            android:id="@+id/WalkSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/StandSaveButton"
+            android:layout_alignBottom="@+id/StandSaveButton"
+            android:layout_toStartOf="@+id/StandSaveButton"
+            android:onClick="GetWalkData"
+            android:text="Walk data"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+        <Button
+            android:id="@+id/StandSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:onClick="GetStandData"
+            android:text="Stand data" />
+
+        <Button
+            android:id="@+id/RunSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/StandSaveButton"
+            android:layout_alignBottom="@+id/StandSaveButton"
+            android:layout_toEndOf="@+id/StandSaveButton"
+            android:onClick="GetRunData"
+            android:text="Run data" />
+
+        <Button
+            android:id="@+id/FinishMeasureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/RunSaveButton"
+            android:layout_below="@+id/StandSaveButton"
+            android:text="finish measure" />
+
+        <Button
+            android:id="@+id/SaveArffButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FinishMeasureButton"
+            android:layout_toStartOf="@+id/DeleteFiles"
+            android:text="save arff file" />
+
+        <Button
+            android:id="@+id/DeleteFiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/FinishMeasureButton"
+            android:layout_below="@+id/FinishMeasureButton"
+            android:text="Delete files" />
+
+        <Button
+            android:id="@+id/SendFileToWeka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/DeleteFiles"
+            android:layout_below="@+id/DeleteFiles"
+            android:text="send" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
